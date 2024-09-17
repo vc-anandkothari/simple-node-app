@@ -1,22 +1,20 @@
-// Import express
 const express = require('express');
+const bodyParser = require('body-parser');
 
-// Initialize app
 const app = express();
+const port = 3002;
 
-// Create a simple GET endpoint
+// Built-in Middleware to parse JSON data in the request body
+app.use(bodyParser.json());
+
+// Use the routes in your app
 app.get('/', (req, res) => {
-  res.send('Hello from your Node Js application');
+  res.send("Hello from Youtube code 2");
+});
+app.get('/users', (req, res) => {
+  res.send("This is users list from Youtube code 2");
 });
 
-// Create a simple GET endpoint
-app.get('/greet', (req, res) => {
-  res.send('Greetings from the GET endpoint!');
-});
-
-
-// Start the server
-const port = 3000;
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+  console.log(`Server is running on http://localhost:${port}`);
 });
