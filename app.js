@@ -9,10 +9,10 @@ app.use(bodyParser.json());
 
 // Use the routes in your app
 app.get('/', (req, res) => {
-  res.send("Hello from Youtube code 2");
+  res.send("Hello! from Node JS Application");
 });
-app.get('/users', (req, res) => {
-  res.send("This is users list from Youtube code 2");
+app.get('/cars', (req, res) => {
+  res.send("Response from Cars API");
 });
 
 app.listen(port, () => {
