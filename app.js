@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 
 // Use the routes in your app
 app.get('/', (req, res) => {
-  res.send(`Hello! from Node JS Application -  ${PORT}`);
+  res.send(`Hello! from Node JS Application -  ${port}`);
 });
 
 app.get('/cars', (req, res) => {
